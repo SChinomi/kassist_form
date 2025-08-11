@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お申し込み完了 - エクステリアプロ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #FFECE3;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #F67639 0%, #E5692F 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header .success-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .header .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .thank-you-message {
+            background: #FDF7F3;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px solid #F67639;
+        }
+        
+        .thank-you-message h2 {
+            color: #E5692F;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-message p {
+            font-size: 16px;
+            color: #A0522D;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .next-steps {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .next-steps h3 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .next-steps h3::before {
+            content: "📋";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .step-list {
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .step-number {
+            background: #F67639;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .step-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, #FDF7F3 0%, #FCF0E8 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 2px solid #F67639;
+        }
+        
+        .contact-info h3 {
+            color: #E5692F;
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .contact-item .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .contact-item .label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .contact-item .value {
+            color: #E5692F;
+            font-size: 14px;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .back-btn {
+            background: linear-gradient(135deg, #F67639 0%, #E5692F 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(246, 118, 57, 0.3);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #F67639 0%, #E5692F 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header .subtitle {
+                font-size: 16px;
+            }
+            
+            .content-section {
+                padding: 30px 20px;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .contact-item {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="content-section">
+            <div class="thank-you-message">
+                <h2>🎉 ケイアシスト外壁洗浄 無料現地調査<br>お申し込み完了</h2>
+                <p>外壁洗浄の無料現地調査のお申し込みを受け付けいたしました。</p>
+                <p>ご入力いただいた内容を確認の上、24時間以内に日程確認のご連絡をいたします。</p>
+            </div>
+            
+            <div class="next-steps">
+                <h3>今後の流れ</h3>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>日程確認のご連絡</h4>
+                            <p>24時間以内に、ご希望の日時について確認のご連絡をいたします。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>現地調査の実施</h4>
+                            <p>約30-60分かけて、外壁の状況を詳しく確認いたします。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>最適プランのご提案</h4>
+                            <p>調査結果に基づき、最適な工事プランとお見積もりをご提示いたします。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>📞 お問い合わせ</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <div class="label">お問い合わせ</div>
+                        <div class="value"><a href="https://k-assist.pro/contact/" target="_blank" style="color: #E5692F; text-decoration: none;">お問い合わせフォーム</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <div class="label">電話</div>
+                        <div class="value">0120-43-9696</div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">🕒</span>
+                        <div class="label">営業時間</div>
+                        <div class="value">9:00-18:00</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="footer">
+        株式会社ケイアシスト All Rights Reserved.
+    </div>
+</body>
+</html> 
