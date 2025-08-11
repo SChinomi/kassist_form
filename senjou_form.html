@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外壁無料現地調査 - エクステリアプロ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #FFECE3;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #F67639 0%, #E5692F 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .header .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .header         .free-badge {
+            background: #E5692F;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .services-info {
+            background: #f8f9fa;
+            padding: 25px;
+        }
+        
+        .services-info h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .services-info h2::before {
+            content: "🏠";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .service-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .service-item h3 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-item ul {
+            list-style: none;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .service-item li {
+            padding: 3px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .service-item li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .consultation-highlight {
+            background: linear-gradient(135deg, #FDF7F3 0%, #FCF0E8 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #F67639;
+            text-align: center;
+        }
+        
+        .consultation-highlight h3 {
+            color: #E5692F;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .consultation-highlight p {
+            font-size: 16px;
+            color: #A0522D;
+        }
+        
+        .process-flow {
+            background: #FDF9F6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 1px solid #F4C3A1;
+        }
+        
+        .process-flow h3 {
+            color: #E5692F;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .flow-steps {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .flow-step {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+        }
+        
+        .flow-step .step-number {
+            background: #F67639;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 8px;
+        }
+        
+        .flow-step .step-text {
+            font-size: 14px;
+            color: #E5692F;
+            font-weight: bold;
+        }
+        
+        .form-section {
+            padding: 30px;
+        }
+        
+        .form-section h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #F67639;
+            box-shadow: 0 0 0 3px rgba(246, 118, 57, 0.1);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .date-time-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .date-time-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .date-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .checkbox-group {
+            margin: 20px 0;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #F67639 0%, #E5692F 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(246, 118, 57, 0.3);
+        }
+        
+        .privacy-note {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .guarantee-badges {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .guarantee-badge {
+            background: #FDF7F3;
+            color: #E5692F;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #F67639;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #F67639 0%, #E5692F 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            margin-top: 0;
+        }
+        @media (max-width: 768px) {
+            .form-row, .date-grid {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header .subtitle {
+                font-size: 16px;
+            }
+            
+            .flow-steps {
+                justify-content: center;
+            }
+            
+            .flow-step {
+                min-width: 140px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .flow-steps {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .flow-step {
+                min-width: auto;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ケイアシスト外壁洗浄 無料現地調査</h1>
+            <p class="subtitle">高圧洗浄で外壁を新品同様に！その他外壁のお悩みもご相談ください</p>
+            <div class="free-badge">✨ 完全無料 ✨</div>
+            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <p style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">🚫 売り込み・営業は一切いたしません</p>
+                <p style="font-size: 14px; opacity: 0.9;">現地調査は純粋に外壁の状況確認とアドバイスのみ。お客様が検討したい場合のみお見積もりをお渡しします。</p>
+            </div>
+        </div>
+        
+        <div class="services-info">
+            <div class="consultation-highlight">
+                <h3>「まずは洗浄だけ」「塗装も必要？」どんな相談でもOK</h3>
+                <p>外壁洗浄をご検討の方も、塗装や補修のご相談も、<br>
+                プロが現地で詳しくお答えします。強引な営業は一切ありません。</p>
+            </div>
+            
+            <div class="process-flow">
+                <h3>📋 現地調査の流れ（所要時間：約30-60分）</h3>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">現地到着<br>ご挨拶</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">外壁状況<br>詳細確認</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">最適プラン<br>ご提案</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">無料お見積り<br>ご提示</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="guarantee-badges">
+                <div class="guarantee-badge">🚫 強引な営業なし</div>
+                <div class="guarantee-badge">💰 その場で詳細見積り</div>
+                <div class="guarantee-badge">🎯 必要な工事に特化</div>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <h2>📅 現地調査のご予約</h2>
+            
+            <form id="consultationForm" action="https://docs.google.com/forms/d/e/1FAIpQLScEuRQ3LpKkVaw_mCeo61pkOrBJeLd0O0SxCEUc0oQ9qSHvLw/formResponse" method="POST" target="hidden_iframe">
+                <div class="form-group">
+                    <label for="fullName">お名前 <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="entry.681074358" placeholder="例：田中太郎" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">お電話番号</label>
+                    <input type="tel" id="phone" name="entry.39597549" placeholder="例：090-1234-5678">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="entry.1624950637" placeholder="例：tanaka@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">ご住所 <span class="required">*</span></label>
+                    <input type="text" id="address" name="entry.341659553" placeholder="例：東京都新宿区○○町1-2-3" required>
+                </div>
+                
+                <div class="date-time-section">
+                    <h3>🗓️ ご希望の調査日時</h3>
+                    <div class="date-grid">
+                        <div class="form-group">
+                            <label for="preferredDate1">第1希望日 <span class="required">*</span></label>
+                            <input type="date" id="preferredDate1" name="entry.947584158" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredTime1">時間帯</label>
+                            <input type="text" id="preferredTime1" name="entry.1517681789" placeholder="例：10時から12時">
+                        </div>
+                    </div>
+                    
+                    <div class="date-grid">
+                        <div class="form-group">
+                            <label for="preferredDate2">第2希望日</label>
+                            <input type="date" id="preferredDate2" name="entry.1779613202">
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredTime2">時間帯</label>
+                            <input type="text" id="preferredTime2" name="entry.216710797" placeholder="例：13時から15時">
+                        </div>
+                    </div>
+                    
+                    <div class="date-grid">
+                        <div class="form-group">
+                            <label for="preferredDate3">第3希望日</label>
+                            <input type="date" id="preferredDate3" name="entry.1227019530">
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredTime3">時間帯</label>
+                            <input type="text" id="preferredTime3" name="entry.341538123" placeholder="例：15時から18時">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="concerns">外壁について気になること・ご相談内容</label>
+                    <textarea id="concerns" name="entry.151502280" rows="4" placeholder="例：・外壁の汚れが目立ってきた&#10;・塗装も検討したい&#10;・費用がどのくらいかかるか知りたい&#10;・他社の見積もりと比較したい&#10;・どんな作業が必要か相談したい"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="buildingType">建物種別</label>
+                        <select id="buildingType" name="entry.262435170">
+                            <option value="">選択してください</option>
+                            <option value="一戸建て">一戸建て</option>
+                            <option value="マンション">マンション</option>
+                            <option value="アパート">アパート</option>
+                            <option value="店舗・事務所">店舗・事務所</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="buildingAge">築年数</label>
+                        <select id="buildingAge" name="entry.1638934992">
+                            <option value="">選択してください</option>
+                            <option value="5年未満">5年未満</option>
+                            <option value="5-10年">5-10年</option>
+                            <option value="10-15年">10-15年</option>
+                            <option value="15-20年">15-20年</option>
+                            <option value="20年以上">20年以上</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="agreement" name="entry.168427262" value="同意する" required>
+                        <span class="required">*</span> <a href="https://k-assist.pro/policy/" target="_blank" style="color: #F67639;">個人情報保護方針</a>に同意します
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    🧽 外壁洗浄の無料現地調査を申し込む
+                </button>
+                
+                <div class="privacy-note">
+                    <strong>🔒 安心してお申し込みください</strong><br>
+                    • 調査・相談・見積もりは完全無料です<br>
+                    • 強引な営業は一切いたしません<br>
+                    • お気軽にご相談ください
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        株式会社ケイアシスト All Rights Reserved.
+    </div>
+    
+    <!-- 隠しiframeでフォーム送信 -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    
+    <script>
+        // 今日以降の日付のみ選択可能にする
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('preferredDate1').setAttribute('min', today);
+        document.getElementById('preferredDate2').setAttribute('min', today);
+        document.getElementById('preferredDate3').setAttribute('min', today);
+        
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            // バリデーションは残しつつ、Googleフォーム送信を許可
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const preferredDate1 = document.getElementById('preferredDate1').value;
+            const agreement = document.getElementById('agreement').checked;
+            
+            if (!fullName || !email || !address || !preferredDate1 || !agreement) {
+                e.preventDefault();
+                alert('必須項目をすべて入力してください。');
+                return;
+            }
+            
+            // 電話番号のバリデーション（任意項目になったので、入力されている場合のみチェック）
+            const phone = document.getElementById('phone').value.trim();
+            if (phone) {
+                const phoneRegex = /^[\d\-\(\)\+\s]+$/;
+                if (!phoneRegex.test(phone)) {
+                    e.preventDefault();
+                    alert('有効な電話番号を入力してください。');
+                    return;
+                }
+            }
+            
+            // メールアドレスのバリデーション
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('有効なメールアドレスを入力してください。');
+                return;
+            }
+            
+            // 送信処理のUI更新
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '📤 送信中...';
+            submitBtn.disabled = true;
+            
+            // 送信完了後の処理
+            setTimeout(() => {
+                alert('現地調査のお申し込みありがとうございます！\n\n📞 24時間以内に日程確認のご連絡をいたします。\n🏠 調査当日は外壁の状況を詳しく拝見し、最適なプランをご提案いたします。');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+            }, 2000);
+        });
+        
+        // 電話番号の自動フォーマット
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/[^\d]/g, '');
+            if (value.length >= 6) {
+                if (value.length <= 10) {
+                    value = value.replace(/(\d{2,4})(\d{2,4})(\d{4})/, '$1-$2-$3');
+                } else {
+                    value = value.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+                }
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
