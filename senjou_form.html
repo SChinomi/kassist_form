@@ -167,13 +167,14 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 15px;
+            max-width: 100%;
         }
         
         .flow-step {
             text-align: center;
-            flex: 1;
-            min-width: 150px;
-            max-width: 200px;
+            flex: 0 1 auto;
+            min-width: 120px;
+            max-width: 150px;
         }
         
         .flow-step .step-number {
@@ -343,7 +344,38 @@
             font-size: 12px;
             margin-top: 0;
         }
-        @media (max-width: 768px) {
+        /* タブレット以上：4つ横並び（デフォルト） */
+        @media (max-width: 900px) {
+            /* 中サイズ：3つ+1つの配置 */
+            .flow-steps {
+                justify-content: center;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .flow-step {
+                flex: 0 1 calc(33.333% - 10px);
+                min-width: 120px;
+                max-width: 140px;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            /* 小サイズ：2つずつ2行で表示 */
+            .flow-steps {
+                justify-content: center;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+            
+            .flow-step {
+                flex: 0 1 calc(50% - 7.5px);
+                min-width: 120px;
+                max-width: 140px;
+                margin-bottom: 15px;
+            }
+            
             .form-row, .date-grid {
                 flex-direction: column;
                 gap: 10px;
@@ -360,26 +392,17 @@
             .header .subtitle {
                 font-size: 16px;
             }
-            
-            .flow-steps {
-                justify-content: center;
-            }
-            
-            .flow-step {
-                min-width: 140px;
-                margin-bottom: 10px;
-            }
         }
         
         @media (max-width: 480px) {
+            /* 最小サイズでも2つずつ2行を維持 */
             .flow-steps {
-                flex-direction: column;
-                gap: 20px;
+                max-width: 300px;
             }
             
             .flow-step {
-                min-width: auto;
-                max-width: none;
+                min-width: 110px;
+                max-width: 130px;
             }
         }
     </style>
