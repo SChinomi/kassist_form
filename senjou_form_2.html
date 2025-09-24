@@ -91,6 +91,18 @@
 
         .privacy-note{ background:#f8f9fa; padding:15px; border-radius:8px; margin-top:20px; font-size:14px; color:#666; border:1px solid #e0e0e0; }
 
+        /* 追加: 実績・作業イメージ用 */
+        .media-section{ padding:30px; }
+        .media-section h2{ color:#2c3e50; font-size:22px; margin-bottom:16px; text-align:center; }
+        .media-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:15px; align-items:start; }
+        .before-after-card, .work-card{ background:#fff; border:1px solid #e0e0e0; border-radius:12px; padding:12px; }
+        .ba-grid{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+        .ba-grid img{ width:100%; border-radius:8px; display:block; aspect-ratio:4/3; object-fit:cover; }
+        .video-frame img{ width:100%; height:auto; border-radius:8px; display:block; aspect-ratio:16/9; object-fit:cover; }
+        .media-caption{ font-size:13px; color:#666; margin-top:6px; text-align:center; }
+        .price-note{ text-align:center; font-weight:700; color:#C2410C; margin-top:10px; }
+        .media-bullets{ margin-top:12px; color:#555; font-size:14px; list-style:disc; padding-left:22px; }
+
         .footer{ background:linear-gradient(135deg,#F67639 0%,#E5692F 100%); color:#fff; text-align:center; padding:15px; font-size:12px; margin-top:0; }
         .footer a{ color:#fff; text-decoration:underline; }
 
@@ -118,6 +130,30 @@
             <!-- ▼注意書きは左寄せ -->
             <!-- <p class="trial-note">※無料お試し洗浄は、外壁の一部分を洗浄し、仕上がりや効果を実際にご確認いただくためのサービスです。</p> -->
             <div class="free-badge">✨ 完全無料 ✨</div>
+        </div>
+
+        <!-- 実績・作業イメージ（プレースホルダ） -->
+        <div class="media-section" aria-label="作業風景とビフォーアフター">
+            <!-- <h2>🧽 作業風景とビフォーアフター</h2> -->
+            <div class="media-grid">
+                <div class="before-after-card">
+                    <figure>
+                        <img src="https://placehold.co/960x540?text=Before+%2F+After+Sample" alt="ビフォーアフター例（プレースホルダ）" loading="lazy" style="width:100%; border-radius:8px; display:block; aspect-ratio:16/9; object-fit:cover;">
+                        <figcaption class="media-caption">ビフォーアフター例</figcaption>
+                    </figure>
+                </div>
+
+                <div class="work-card">
+                    <div class="video-frame">
+                        <picture>
+                          <source media="(min-width: 1024px)" srcset="https://placehold.co/720x404?text=Work+Video+Placeholder">
+                          <img src="https://placehold.co/600x338?text=Work+Image+Placeholder" alt="作業風景（プレースホルダ）" loading="lazy">
+                        </picture>
+                    </div>
+                    <p class="media-caption">作業風景イメージ（動画差し替え予定）</p>
+                </div>
+            </div>
+
         </div>
 
         <div class="form-section">
