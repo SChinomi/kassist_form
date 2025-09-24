@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NVPTWSPZ');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外壁洗浄無料調査 - ケイアシスト</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        :root{
+          --btn-bg:#C2410C;
+          --btn-hover:#9A3412;
+          --btn-active:#7C2D12;
+          --btn-focus:#FED7AA;
+          --btn-shadow: rgba(194,65,12,.35);
+        }
+
+        body{
+          font-family:'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+          line-height:1.6; color:#333; background:#FFECE3; min-height:100vh; padding:20px;
+        }
+
+        .container{ max-width:650px; margin:0 auto; background:#fff; border-radius:15px; box-shadow:0 15px 35px rgba(0,0,0,.1); overflow:hidden; }
+
+        .header{ background:linear-gradient(135deg,#F67639 0%,#E5692F 100%); color:#fff; padding:30px; text-align:center; }
+        .header .region-badge{
+          display:inline-block; background: rgba(255,255,255,.15);
+          border: 1px solid rgba(255,255,255,.35); color:#fff; padding:6px 14px;
+          border-radius:9999px; font-size:14px; font-weight:700; letter-spacing:.02em;
+          margin-bottom:10px;
+        }
+        .header h1{ font-size:28px; margin-bottom:15px; font-weight:bold; }
+        .header .subtitle{ font-size:18px; opacity:.9; margin-bottom:10px; }
+        .header .free-badge{ background:#E5692F; color:#fff; padding:8px 20px; border-radius:25px; font-size:16px; font-weight:bold; display:inline-block; animation:pulse 2s infinite; }
+        /* ▼注意書き（左寄せ＋下に余白） */
+        .header .trial-note{
+          font-size:14px; line-height:1.7; color:#fff; opacity:.95;
+          background: rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3);
+          padding:8px 12px; border-radius:8px; display:inline-block; max-width:560px;
+          margin-top:10px; margin-bottom:12px; /* 余白 */
+          text-align:left; /* 左寄せ */
+        }
+
+        @keyframes pulse{ 0%{transform:scale(1)} 50%{transform:scale(1.05)} 100%{transform:scale(1)} }
+
+        .form-hero-img{
+          width:100%; height:auto; display:block; border-radius:12px;
+          box-shadow:0 8px 20px rgba(0,0,0,.08); margin:16px auto 18px;
+        }
+
+        .form-section{ padding:30px; }
+        .form-section h2{ color:#2c3e50; font-size:22px; margin-bottom:20px; text-align:center; }
+        .form-group{ margin-bottom:20px; }
+        .form-group label{ display:block; margin-bottom:8px; font-weight:bold; color:#2c3e50; }
+        .required{ color:#e74c3c; }
+        .form-group input,.form-group select,.form-group textarea{
+          width:100%; padding:12px 15px; border:2px solid #e0e0e0; border-radius:8px; font-size:16px; transition:border-color .3s ease;
+        }
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+          outline:none; border-color:#F67639; box-shadow:0 0 0 3px rgba(246,118,57,.1);
+        }
+
+        .form-row{ display:flex; gap:15px; }
+        .form-row .form-group{ flex:1; }
+
+        .date-time-section{ background:#f8f9fa; padding:20px; border-radius:8px; margin:20px 0; }
+        .date-time-section h3{ color:#2c3e50; margin-bottom:15px; text-align:center; }
+        .date-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:15px; }
+
+        .checkbox-group{ margin:20px 0; }
+        .checkbox-group label{ display:flex; align-items:center; font-weight:normal; cursor:pointer; }
+        .checkbox-group input[type="checkbox"]{ width:auto; margin-right:10px; transform:scale(1.2); }
+
+        .submit-btn{
+          background: var(--btn-bg); color:#fff; padding:18px 40px; border:none; border-radius:50px;
+          font-size:20px; font-weight:700; cursor:pointer; width:100%; margin-top:20px;
+          transition: background .15s ease, transform .05s ease, box-shadow .15s ease;
+          box-shadow:0 8px 24px var(--btn-shadow);
+        }
+        .submit-btn:hover{ background:var(--btn-hover); box-shadow:0 10px 28px var(--btn-shadow); transform:translateY(-1px); }
+        .submit-btn:active{ background:var(--btn-active); transform:translateY(0); }
+        .submit-btn:focus-visible{ outline:3px solid var(--btn-focus); outline-offset:2px; }
+        .submit-btn:disabled{ opacity:.7; cursor:not-allowed; transform:none; }
+
+        .privacy-note{ background:#f8f9fa; padding:15px; border-radius:8px; margin-top:20px; font-size:14px; color:#666; border:1px solid #e0e0e0; }
+
+        .footer{ background:linear-gradient(135deg,#F67639 0%,#E5692F 100%); color:#fff; text-align:center; padding:15px; font-size:12px; margin-top:0; }
+        .footer a{ color:#fff; text-decoration:underline; }
+
+        @media (max-width:600px){
+          .header .region-badge{ font-size:13px; }
+          .header h1{ font-size:24px; }
+          .header .subtitle{ font-size:16px; }
+          .header .trial-note{ font-size:13px; }
+          .form-row, .date-grid{ flex-direction:column; gap:10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVPTWSPZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="container">
+        <div class="header">
+            <div class="region-badge">坂戸・鶴ヶ島・川越の外壁洗浄</div>
+            <!-- ▼見出しの間に改行を追加 -->
+            <h1>ケイアシスト外壁洗浄<br>無料お試し洗浄(一部)及び無料現地調査</h1>
+            <p class="subtitle">外壁洗浄で外壁を新品同様に！その他外壁のお悩みもご相談ください</p>
+            <!-- ▼注意書きは左寄せ -->
+            <p class="trial-note">※無料お試し洗浄は、外壁の一部分を洗浄し、仕上がりや効果を実際にご確認いただくためのサービスです。</p>
+            <div class="free-badge">✨ 完全無料 ✨</div>
+        </div>
+
+        <div class="form-section">
+            <h2>📅 現地調査のご予約</h2>
+
+            <form id="consultationForm" action="https://docs.google.com/forms/d/e/1FAIpQLScEuRQ3LpKkVaw_mCeo61pkOrBJeLd0O0SxCEUc0oQ9qSHvLw/formResponse" method="POST" target="hidden_iframe">
+                <div class="form-group">
+                    <label for="fullName">お名前 <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="entry.681074358" placeholder="例：田中太郎" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">お電話番号</label>
+                    <input type="tel" id="phone" name="entry.39597549" placeholder="例：090-1234-5678">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="entry.1624950637" placeholder="例：tanaka@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">ご住所 <span class="required">*</span></label>
+                    <input type="text" id="address" name="entry.341659553" placeholder="例：東京都新宿区○○町1-2-3" required>
+                </div>
+
+                <div class="date-time-section">
+                    <h3>🗓️ ご希望の調査日時</h3>
+                    <div class="date-grid">
+                        <div class="form-group">
+                            <label for="preferredDate1">第1希望日 <span class="required">*</span></label>
+                            <input type="date" id="preferredDate1" name="entry.947584158" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredTime1">時間帯</label>
+                            <input type="text" id="preferredTime1" name="entry.1517681789" placeholder="例：10時から12時">
+                        </div>
+                    </div>
+
+                    <div class="date-grid">
+                        <div class="form-group">
+                            <label for="preferredDate2">第2希望日</label>
+                            <input type="date" id="preferredDate2" name="entry.1779613202">
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredTime2">時間帯</label>
+                            <input type="text" id="preferredTime2" name="entry.216710797" placeholder="例：13時から15時">
+                        </div>
+                    </div>
+
+                    <div class="date-grid">
+                        <div class="form-group">
+                            <label for="preferredDate3">第3希望日</label>
+                            <input type="date" id="preferredDate3" name="entry.1227019530">
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredTime3">時間帯</label>
+                            <input type="text" id="preferredTime3" name="entry.341538123" placeholder="例：15時から18時">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="concerns">外壁について気になること・ご相談内容</label>
+                    <textarea id="concerns" name="entry.151502280" rows="4" placeholder="例：・外壁の汚れが目立ってきた&#10;・塗装も検討したい&#10;・費用がどのくらいかかるか知りたい&#10;・他社の見積もりと比較したい&#10;・どんな作業が必要か相談したい"></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="agreement" name="entry.168427262" value="同意する" required>
+                        <span class="required">*</span> <a href="https://k-assist.pro/policy/" target="_blank" style="color:#F67639;">個人情報保護方針</a>に同意します
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">🧽 外壁洗浄の無料現地調査を申し込む</button>
+
+                <!-- 送信ボタン直後の画像（PCは formpc.png、その他は form.png） -->
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="https://kassist-tsy.com/senjou_form/img/formpc.png">
+                  <img
+                    src="https://kassist-tsy.com/senjou_form/img/form.png"
+                    alt="現地調査のご予約イメージ"
+                    class="form-hero-img"
+                    loading="lazy"
+                  >
+                </picture>
+
+                <div class="privacy-note">
+                    <strong>🔒 安心してお申し込みください</strong><br>
+                    • 調査・相談・見積もりは完全無料です<br>
+                    • 強引な営業は一切ありません<br>
+                    • お気軽にご相談ください
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+      <a href="https://k-assist.pro/company/" target="_blank" rel="noopener">株式会社ケイアシスト</a> All Rights Reserved.
+    </div>
+
+    <!-- 隠しiframeでフォーム送信 -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+      // 今日以降のみ
+      const today = new Date().toISOString().split('T')[0];
+      ['preferredDate1','preferredDate2','preferredDate3'].forEach(id=>{
+        const el=document.getElementById(id); if(el) el.setAttribute('min', today);
+      });
+
+      document.getElementById('consultationForm').addEventListener('submit', function(e){
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const address = document.getElementById('address').value.trim();
+        const preferredDate1 = document.getElementById('preferredDate1').value;
+        const agreement = document.getElementById('agreement').checked;
+        if (!fullName || !email || !address || !preferredDate1 || !agreement){
+          e.preventDefault(); alert('必須項目をすべて入力してください。'); return;
+        }
+        const phone = document.getElementById('phone').value.trim();
+        if (phone){
+          const phoneRegex = /^[\d\-\(\)\+\s]+$/;
+          if (!phoneRegex.test(phone)){ e.preventDefault(); alert('有効な電話番号を入力してください。'); return; }
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)){ e.preventDefault(); alert('有効なメールアドレスを入力してください。'); return; }
+
+        const submitBtn = document.querySelector('.submit-btn');
+        submitBtn.innerHTML = '📤 送信中...';
+        submitBtn.disabled = true;
+
+        // （任意）GTMイベント
+        // if (window.dataLayer) dataLayer.push({event:'form_submit'});
+
+        setTimeout(()=>{ window.location.href = 'thankyou.html'; }, 2000);
+      });
+
+      // 電話番号の自動フォーマット
+      document.getElementById('phone').addEventListener('input', function(e){
+        let value = e.target.value.replace(/[^\d]/g,'');
+        if (value.length >= 6){
+          if (value.length <= 10){
+            value = value.replace(/(\d{2,4})(\d{2,4})(\d{4})/,'$1-$2-$3');
+          } else {
+            value = value.replace(/(\d{3})(\d{4})(\d{4})/,'$1-$2-$3');
+          }
+        }
+        e.target.value = value;
+      });
+    </script>
+</body>
+</html>
